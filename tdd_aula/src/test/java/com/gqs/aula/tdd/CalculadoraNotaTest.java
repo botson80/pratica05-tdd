@@ -29,4 +29,31 @@ void deveReprovarComNota69() {
     CalculadoraNota calc = new CalculadoraNota();
     assertFalse(calc.estaAprovadoPorNota(69));
 }
+@Test
+void deveRejeitarA1MaiorQue30() {
+    CalculadoraNota calc = new CalculadoraNota();
+    assertThrows(IllegalArgumentException.class,
+        () -> calc.calcularNotaFinal(35, 20, 30));
+}
+
+@Test
+void deveRejeitarA2Invalida() {
+    CalculadoraNota calc = new CalculadoraNota();
+    assertThrows(IllegalArgumentException.class,
+        () -> calc.calcularNotaFinal(20, 35, 30));
+}
+
+@Test
+void deveRejeitarA3Invalida() {
+    CalculadoraNota calc = new CalculadoraNota();
+    assertThrows(IllegalArgumentException.class,
+        () -> calc.calcularNotaFinal(20, 20, 45));
+}
+
+@Test
+void deveRejeitarA1Negativa() {
+    CalculadoraNota calc = new CalculadoraNota();
+    assertThrows(IllegalArgumentException.class,
+        () -> calc.calcularNotaFinal(-1, 20, 30));
+}
 }
