@@ -12,3 +12,5 @@ Porque no TDD os testes funcionam como a "especificação executável" das regra
 
  5. Qual ciclo foi o mais difícil para você, e por quê?
 O pior foi o ciclo 2, pois foi o início antes de pegar o embalo para você fazer os outros, tanto que muitas vezes para rodar os testes estavam falhando, então tive que pedir muita ajuda para o professor, mas quando domina esse ciclo todos os outros ficam mais fáceis
+Print da tela:
+![Resultado dos Testes](testes-verdes.png)
